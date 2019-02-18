@@ -11,13 +11,13 @@
                 		<tr>
                 			<td>Description</td>
                 			<td>Nature</td>
-                            <td>Date de creation</td>
+                      <td>Date de creation</td>
                 		</tr>
                 		@foreach($actes as $acte)
                 		<tr>
                   			<td>{{$acte->description}}</td>
                 			<td>{{$acte->nature->nom}}</td>
-                            <td>{{$acte->created_at}}</td>
+                      <td>{{$acte->created_at}}</td>
                 			            
                 		</tr>
                 		@endforeach

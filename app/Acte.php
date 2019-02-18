@@ -9,6 +9,9 @@ class Acte extends Model
     protected $table="actes";
       protected $fillable=[
     	'description',
+        'requerant',
+        'requis',
+        'prix',
     	'user_id',
     	'nature_id'
 

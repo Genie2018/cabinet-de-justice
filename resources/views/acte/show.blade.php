@@ -18,7 +18,18 @@
                         <td>Nature</td>
                         <td>{{$acte->nature->nom}}</td>
                       </tr>
-                      
+                      <tr>
+                        <td>Requerant</td>
+                        <td>{{$acte->requerant}}</td>
+                      </tr>
+                      <tr>
+                        <td>Requis</td>
+                        <td>{{$acte->requis}}</td>
+                      </tr>
+                      <tr>
+                        <td>Prix</td>
+                        <td>{{$acte->prix}}</td>
+                      </tr>                      
                       <tr>
                         <td>Créer le:</td>
                         <td>{{$acte->created_at}}</td>

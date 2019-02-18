@@ -60,9 +60,9 @@
                 		@foreach($actes as $acte)
                 		<tr>
                   			<td>{{$acte->description}}</td>
-                			<td>{{$acte->nature->nom}}</td>
-                			<td>{{$acte->user->name}}</td>
-                            <td>{{$acte->created_at}}</td>
+                  			<td>{{$acte->nature->nom}}</td>
+                  			<td>{{$acte->user->name}}</td>
+                        <td>{{$acte->created_at}}</td>
                 			
                 			 <td>
                                <a href="{{url('acte/'.$acte->id.'/consulter')}}" class="btn btn-info">Consulter</a>

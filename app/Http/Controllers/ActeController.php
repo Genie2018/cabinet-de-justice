@@ -47,6 +47,9 @@ class ActeController extends Controller
         $data=$request->all();
         $this->validate($request,[
             'description'=>'required|min:10',
+            'requerant'=>'required',
+            'requis'=>'required',
+            'prix'=>'required',
             'nature_id'=>'required',
         ]);
         $data=array_add($data,'user_id',Auth::user()->id);

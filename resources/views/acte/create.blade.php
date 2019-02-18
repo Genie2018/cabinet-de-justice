@@ -15,10 +15,29 @@
                   <small class="text-danger">{{$errors->first('description')}}</small>
 
              </div>
+              <div class="form-group{{$errors->has('requerant')? 'has-error': ''}}">
+                  {!! Form::label('requerant','Nom du requerant :') !!}
+                  {!! Form::text('requerant',null,['class'=>'form-control','required'=>'required']) !!}
+                  <small class="text-danger">{{$errors->first('requerant')}}</small>
+
+             </div>
+              <div class="form-group{{$errors->has('requis')? 'has-error': ''}}">
+                  {!! Form::label('requis','Nom du requis :') !!}
+                  {!! Form::text('requis',null,['class'=>'form-control','required'=>'required']) !!}
+                  <small class="text-danger">{{$errors->first('requis ')}}</small>
+
+             </div>
                <div class="form-group{{$errors->has('nature_id')? 'has-error': ''}}">
                   {!! Form::label('nature_id','Nature:') !!}
                   {!! Form::select('nature_id',$natures,null,['class'=>'form-control','required'=>'required']) !!}
                   <small class="text-danger">{{$errors->first('nature_id')}}</small>
+
+             </div>
+
+             <div class="form-group{{$errors->has('prix')? 'has-error': ''}}">
+                  {!! Form::label('prix','Prix :') !!}
+                  {!! Form::text('prix',null,['class'=>'form-control','required'=>'required']) !!}
+                  <small class="text-danger">{{$errors->first('prix ')}}</small>
 
              </div>
 
