@@ -22,5 +22,13 @@ Route::get('acte/{id}/consulter','ActeController@consulter');
 Route::get('acte/{id}/show','ActeController@show');
 
 //Edition
-Route::get('acte/{id}/editer','EditionController@create');
-Route::post('acte/{id}enregistrer','EditionController@store');
+//Route::get('acte/{id}/editer','EditionController@create');
+//Route::post('acte/{id}enregistrer','EditionController@store');
+
+Route::get('/acte/edit/{id}',[
+'uses'=>'ActeController@edit',
+'as'=>'acte.edit']);
+
+ Route::post('/acte/update/{id}',[
+'uses'=>'ActeController@update',
+'as'=>'acte.update']);

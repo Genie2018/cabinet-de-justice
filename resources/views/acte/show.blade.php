@@ -43,7 +43,9 @@
                         <td>{{$acte->created_at}}</td>
                       </tr>
                     </table>
-                    <a href="{{url('acte/'.$acte->id.'/editer')}}" class="btn btn-info">Editer</a>
+                     @if(Auth::user()->role=='admin')
+                    <a href="" class="btn btn-info">Imprimer</a>
+                        @endif
                         </div>
                       </div>
                     </div>

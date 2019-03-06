@@ -31,19 +31,7 @@
                             <input type="text" name="prix" id="prix" value="{{$acte->prix}}" class="form-control">
                         </div>
                          
-                         <div class="form-group">
-                            <label for="nature">nature</label>
-                            <select name="nature" id="nature" class="form-control">
-                                @foreach($natures as $nature)
-                                @if($nature->id == $acte->nature_id)
-                                     <option value="{{$nature->id}}" selected>{{$nature->nom}}</option>
-                                @else
-                                 <option value="{{$nature->id}}">{{$nature->nom}}</option>
-                                @endif
-                               
-                                @endforeach
-                            </select>
-                        </div>
+                         
                          <div class="form-group">
                             <center>
                             <button type="submit" class="btn btn-success btn-lg">Modifier</button>
@@ -57,3 +45,4 @@
     </div>
 </div>
 @endsection
+    

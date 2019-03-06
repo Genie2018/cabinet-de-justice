@@ -28,6 +28,7 @@ class HomeController extends Controller
 
           $statistiques['total']=Acte::All()->count();
           $statistiques['Location']=Acte::where('nature_id','1')->get()->count();
+          $statistiques['name']=Acte::where('user_id',Auth::user()->id)->get()->count();
           $statistiques['Assignation']=Acte::where('nature_id','2')->get()->count();
           $statistiques['pv de constat']=Acte::where('nature_id','3')->get()->count();
           $statistiques['signification']=Acte::where('nature_id','4')->get()->count();
@@ -35,7 +36,7 @@ class HomeController extends Controller
 
         if(Auth::user()->role=='admin')
             {
- $actes=Acte::paginate(10);
+ $actes=Acte::orderBy('created_at','desc')->paginate(10);
             }
             else{
  $actes=Acte::where('user_id',Auth::user()->id)->paginate(10);

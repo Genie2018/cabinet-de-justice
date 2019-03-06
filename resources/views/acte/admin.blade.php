@@ -10,7 +10,9 @@
         <td>Total des actes</td>
         <td><span class="badge badge-primary">{{$statistiques['total']}}</span></td>
         <td>Total des utilisateur</td>
-        <td><span class="badge badge-primary">{{\App\User::All()->count()}}</span>  </td>
+        <td><span class="badge badge-primary">{{\App\User::All()->count()}}</span></td>
+        <td>Mes actes</td>
+        <td><span class="badge badge-primary">{{$statistiques['name']}}</span></td>
       </tr>
       <tr>
         <td>Nature</td>
@@ -55,7 +57,9 @@
                 			<td>Nature</td>
                 			<td>Utilisateur</td>
                 			<td>Date de creation</td>
-                            <td>Actions</td>
+                         <td>Details</td>
+                         <td>Editer</td>
+                      <td>Supprimer</td>
                 		</tr>
                 		@foreach($actes as $acte)
                 		<tr>
@@ -67,6 +71,14 @@
                 			 <td>
                                <a href="{{url('acte/'.$acte->id.'/consulter')}}" class="btn btn-info">Consulter</a>
                            </td>
+                           <td>    
+                  <a href="{{route('acte.edit',['id'=>$acte->id])}}" class="btn btn-sm btn-warning">Editer</a>
+                          </td>
+                          
+                          <td>
+                  <a href="" class="btn btn-sm btn-danger">Supprimer</a>
+                          
+                        </td>
                 		</tr>
                 		@endforeach
                 	</table>

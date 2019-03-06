@@ -74,7 +74,8 @@ class ActeController extends Controller
      */
     public function edit($id)
     {
-        //
+         $acte=Acte::where('id',$id)->first();
+       return view('acte_edit',['acte'=>$acte,'natures'=>Nature::all()]);
     }
 
     /**
@@ -86,7 +87,15 @@ class ActeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+           $acte= Acte::findOrFail($id);
+           $acte->description=$request->input('description');
+           $acte->requerant=$request->input('requerant');
+           $acte->requis=$request->input('requis');
+           $acte->prix=$request->input('prix');
+           //$acte->nature_id=$request->input('nature_id');
+           $acte->save();
+            return redirect()->back();
+       
     }
 
     /**
