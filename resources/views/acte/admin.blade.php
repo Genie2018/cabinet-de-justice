@@ -72,11 +72,11 @@
                                <a href="{{url('acte/'.$acte->id.'/consulter')}}" class="btn btn-info">Consulter</a>
                            </td>
                            <td>    
-                  <a href="{{route('acte.edit',['id'=>$acte->id])}}" class="btn btn-sm btn-warning">Editer</a>
+                  <a href="{{route('acte.edit',['id'=>$acte->id])}}" class="btn btn-sm btn-info">Editer</a>
                           </td>
                           
                           <td>
-                  <a href="" class="btn btn-sm btn-danger">Supprimer</a>
+                  <a href="{{route('acte.delete',['id'=>$acte->id])}}" class="btn btn-sm btn-info">Supprimer</a>
                           
                         </td>
                 		</tr>

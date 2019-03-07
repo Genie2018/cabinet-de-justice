@@ -30,14 +30,12 @@
                         <td>Prix</td>
                         <td>{{$acte->prix}}</td>
                       </tr>                      
-                      <tr>
-                        <td>Créer le:</td>
-                        <td>{{$acte->created_at}}</td>
-                      </tr>
+                      
                       <tr>
                         <td>Utilisateur</td>
                         <td>{{$acte->user->name}}</td>
                       </tr>
+
                       <tr>
                         <td>Date de creation</td>
                         <td>{{$acte->created_at}}</td>

@@ -32,3 +32,7 @@ Route::get('/acte/edit/{id}',[
  Route::post('/acte/update/{id}',[
 'uses'=>'ActeController@update',
 'as'=>'acte.update']);
+
+Route::get('/acte/delete/{id}',[
+'uses'=>'ActeController@destroy',
+'as'=>'acte.delete']);

@@ -106,7 +106,11 @@ class ActeController extends Controller
      */
     public function destroy($id)
     {
-        //
+         //Recherche par rapport à l'id et suppression
+        Acte::find($id)->delete();
+        //Creation d'une variable de session
+        Session::flash('success','Acte supprimé');
+        return redirect()->back();
     }
       public function consulter($id)
     {
