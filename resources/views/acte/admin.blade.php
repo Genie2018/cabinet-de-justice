@@ -12,7 +12,7 @@
         <td>Total des utilisateur</td>
         <td><span class="badge badge-primary">{{\App\User::All()->count()}}</span></td>
         <td>Mes actes</td>
-        <td><span class="badge badge-primary">{{$statistiques['name']}}</span></td>
+        <td><span class="badge badge-primary">{{$statistiques['mesactes']}}</span></td>
       </tr>
       <tr>
         <td>Nature</td>

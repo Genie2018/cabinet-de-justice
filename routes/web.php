@@ -36,3 +36,10 @@ Route::get('/acte/edit/{id}',[
 Route::get('/acte/delete/{id}',[
 'uses'=>'ActeController@destroy',
 'as'=>'acte.delete']);
+
+Route::get('/search','ActeController@search');
+
+
+
+//redirection lors de la confirmation du mail
+Route::get('/confirm/{id}/{token}','Auth\RegisterController@confirm');

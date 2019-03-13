@@ -6,6 +6,7 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="card">
                 <div class="card-header">Systeme de Gestion du Cabinet</div>
+                
                     <div class="card-body">
                 	   @if(Auth::user()->role=='admin')
                             @include('acte.admin')

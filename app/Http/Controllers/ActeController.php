@@ -25,6 +25,13 @@ class ActeController extends Controller
         //
     }
 
+    public function search(Request $request)
+    {
+        $search=$request->get('search');
+        $posts=DB::table('actes')->where('description','like','%'.$search.'%')->paginate(5);
+        return view('home',['posts'=>$posts]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

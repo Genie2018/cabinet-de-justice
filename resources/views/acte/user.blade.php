@@ -1,5 +1,6 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
+    
     <h3 class="panel-title">
       Statistiques
     </h3>
@@ -8,7 +9,7 @@
     <table class="table table-bordered">
       <tr>
         <td>Total des actes</td>
-        <td><span class="badge badge-primary">{{$statistiques['name']}}</span></td>
+        <td><span class="badge badge-primary">{{$statistiques['mesactes']}}</span></td>
      </tr>
          </table>
   </div>

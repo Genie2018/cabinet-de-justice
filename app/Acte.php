@@ -13,7 +13,7 @@ class Acte extends Model
         'requis',
         'prix',
     	'user_id',
-    	
+    	'nature_id'
 
 
     ];

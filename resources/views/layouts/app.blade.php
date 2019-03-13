@@ -40,6 +40,20 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <!--Champ de recherche 
+                        <div>
+                            <form action="/search" method="get">
+                                <div class="input-group">
+                                    <input type="search" name="search" class="form-control">
+                                    <span class="input-group-prepend">
+                                        <button type="submit" class="btn btn-primary">Search</button>
+                                    </span>
+                                </div>
+                                
+                            </form>
+                        </div>
+                    -->
+
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -73,6 +87,16 @@
                 </div>
             </div>
         </nav>
+
+          @if(session('success'))
+        <div class="container">
+            <div class="alert alert-success">
+            {{session('success')}}
+            </div>
+        </div>
+        @endif
+
+
           @if(Session::has('message'))
         <div class="alert alert-info">
             <p style="text-align:center">
