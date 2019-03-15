@@ -38,6 +38,7 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+   //focntion qui permet de se connecter qu'apres confirmation
     protected function credentials(Request $request){
 
         return array_merge(

@@ -33,6 +33,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                        <!-- Si un utilisateur est connecté afficher creer un acte  -->
                         @if(Auth::user())
                         <li> <a href="{{url('acte/nouveau')}}">Creer un acte</a></li>
                         @endif
@@ -88,7 +89,7 @@
                 </div>
             </div>
         </nav>
-
+            <!-- -->
           @if(session('success'))
         <div class="container">
             <div class="alert alert-success">
@@ -97,7 +98,7 @@
         </div>
         @endif
 
-
+                <!-- Message qui s'affiche lors de la creation d'un acte -->
           @if(Session::has('message'))
         <div class="alert alert-info">
             <p style="text-align:center">
@@ -105,7 +106,7 @@
             </p>
         </div>
         @endif
-
+          <!-- C'est au niveau de cette bloc que se presente tout notre travail le contenu -->
         <main class="py-4">
             @yield('content')
         </main>

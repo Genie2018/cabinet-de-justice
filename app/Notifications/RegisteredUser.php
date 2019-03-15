@@ -38,6 +38,7 @@ class RegisteredUser extends Notification
      * @param  mixed  $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
+    //mise en place d'un systeme de notification pour envoyer un mail
     public function toMail($notifiable)
     {
         return (new MailMessage)

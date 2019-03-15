@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/','HomeController@index');
+Route::get('/','HomeController@index');//Redirection direct au niveau de la page de connexion
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('acte/nouveau','ActeController@create');
-Route::post('acte/enregistrer','ActeController@store');
-Route::get('acte/{id}/consulter','ActeController@consulter');
+Route::get('acte/nouveau','ActeController@create'); //Recuperation de l'url acte/nouveau qui sera transmis a notre controlleur create
+Route::post('acte/enregistrer','ActeController@store');//Recuperation de l'url acte/enregistrer qui qui sera retransmis a la fonction store
+Route::get('acte/{id}/consulter','ActeController@consulter'); //Recuperation de l'url transmis au controller 
 Route::get('acte/{id}/show','ActeController@show');
 
 //Edition

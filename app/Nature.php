@@ -10,7 +10,7 @@ class Nature extends Model
 	 
     
      public function actes(){
-    	return $this->hasMany(\App\Acte::class);
+    	return $this->hasMany(\App\Acte::class); //hasmany c'est pour les clées primaires
     }	
 }
  

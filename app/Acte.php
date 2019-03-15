@@ -18,11 +18,11 @@ class Acte extends Model
 
     ];
       public function nature(){
-    	//Chaque ticket depend d'une priorite
-    	return $this->belongsTo(\App\Nature::class);
+    	//Chaque Acte depend de la nature
+    	return $this->belongsTo(\App\Nature::class); //belongsTo c'est pour les clées etrangeres
     }
     public function user(){
-    	//Chaque ticket depend d'une priorite
+    	//Chaque Acte depend de l'utilisateur
     	return $this->belongsTo(\App\User::class);
     }
 }

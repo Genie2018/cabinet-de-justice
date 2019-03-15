@@ -36,7 +36,7 @@ class HomeController extends Controller
 
         if(Auth::user()->role=='admin')
             {
- $actes=Acte::orderBy('created_at','desc')->paginate(10);
+ $actes=Acte::orderBy('created_at','desc')->paginate(10); // l'objet $acte nous permet de recuperer les données de la base
             }
             else{
  $actes=Acte::where('user_id',Auth::user()->id)->paginate(10);

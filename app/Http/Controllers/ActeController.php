@@ -39,8 +39,8 @@ class ActeController extends Controller
      */
     public function create()
     {
-        $natures=DB::table('natures')->pluck('nom','id');
-        return view('acte.create',compact('natures'));
+        $natures=DB::table('natures')->pluck('nom','id'); //pluck permet de recuperer le nom et l'id au niveau de la table nature et de le stocker dans la variable $natures
+        return view('acte.create',compact('natures')); //Creation du  formulaire dans le dossier acte.create
     }
 
     /**
@@ -51,7 +51,7 @@ class ActeController extends Controller
      */
     public function store(Request $request)
     {
-        $data=$request->all();
+        $data=$request->all(); //Recupere les données qui seront stockés dans notre objet request
         $this->validate($request,[
             'description'=>'required|min:10',
             'requerant'=>'required',
@@ -59,8 +59,8 @@ class ActeController extends Controller
             'prix'=>'required',
             'nature_id'=>'required',
         ]);
-        $data=array_add($data,'user_id',Auth::user()->id);
-        Acte::create($data);
+        $data=array_add($data,'user_id',Auth::user()->id); //associe les données sauvegardées à l'utilisateur connecté
+        Acte::create($data); 
         Session::flash('message','Votre Acte a été crée avec succes');
         return redirect('/home');
     }
@@ -121,7 +121,7 @@ class ActeController extends Controller
     }
       public function consulter($id)
     {
-        $acte=Acte::findOrFail($id);
+        $acte=Acte::findOrFail($id); //Recuperer l'objet qui nous permet d'acceder aux données 
         $acte->save();
          return view('acte.show',compact('acte'));
     }

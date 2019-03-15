@@ -43,7 +43,7 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
-
+        //Methode pour la confirmation dans notre RegisterController
 
         public function confirm($id,$token){
             $user= User::where('id',$id)->where('confirmation_token', $token)->first();
@@ -58,7 +58,7 @@ class RegisterController extends Controller
             }
         }
 
-
+        // Premiere chose à faire cette fonction a éte tirée de RegisterUsers et modifier (systeme auto-login)
      public function register(Request $request)
     {
         $this->validator($request->all())->validate();
@@ -101,7 +101,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'confirmation_token'=>str_replace('/','',bcrypt(str_random(16)))
+            'confirmation_token'=>str_replace('/','',bcrypt(str_random(16))) //sauvegarde de confirmation token au niveau de la base.
         ]);
     }
 }

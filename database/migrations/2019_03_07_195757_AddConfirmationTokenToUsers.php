@@ -13,6 +13,7 @@ class AddConfirmationTokenToUsers extends Migration
      */
     public function up()
     {
+        //Generation d'un champs confirmation Token
         Schema::table('users', function (Blueprint $table) {
             $table->string('confirmation_token')->nullable();
             });

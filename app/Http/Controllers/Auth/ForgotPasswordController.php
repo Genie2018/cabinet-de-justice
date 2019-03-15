@@ -32,7 +32,7 @@ class ForgotPasswordController extends Controller
         $this->middleware('guest');
     }
 
-    //Importer de SendPasswordResetEmails
+    //Importer de SendPasswordResetEmails permet de modifier le mot de passe
      public function sendResetLinkEmail(Request $request)
     {
         $this->validateEmail($request);
