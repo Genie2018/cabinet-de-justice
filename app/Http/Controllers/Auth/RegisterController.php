@@ -49,7 +49,7 @@ class RegisterController extends Controller
             $user= User::where('id',$id)->where('confirmation_token', $token)->first();
 
             if($user){
-                    $user->update(['confirmation_token'=>null]);
+                    $user->update(['confirmation_token' => null]);
                     $this->guard()->login($user);
                     return redirect($this->redirectPath())->with('success','Votre compte a bien été confirmé');
             }

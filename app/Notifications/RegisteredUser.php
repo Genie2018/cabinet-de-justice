@@ -43,9 +43,9 @@ class RegisteredUser extends Notification
         return (new MailMessage)
 
         ->subject('Inscription sur le cabinet  de justice Maitre Fatou senghor')
-                    ->line('Votre compte a été bien cree mais il doit etre confimré,merci de cliquer sur le lien suivant')
-                    ->action('Confirmer mon compte', url("/confirm/{$notifiable->id}/" . urlencode($notifiable->confirmation_token)))
-                    ->line('Thank you for using our application!');
+            ->line('Votre compte a été bien cree mais il doit etre confimré,merci de cliquer sur le lien suivant')
+            ->action('Confirmer mon compte', url("/confirm/{$notifiable->id}/" . urlencode($notifiable->confirmation_token)))
+            ->line('Thank you for using our application!');
     }
 
     /**

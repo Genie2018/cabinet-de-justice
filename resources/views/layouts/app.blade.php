@@ -40,7 +40,8 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <!--Champ de recherche 
+                        <!--
+                        Champ de recherche 
                         <div>
                             <form action="/search" method="get">
                                 <div class="input-group">
